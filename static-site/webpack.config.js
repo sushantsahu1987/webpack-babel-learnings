@@ -3,8 +3,7 @@ const path = require('path');
 const config = {
     entry: './src/index.js',
     output: {
-        path: path.join(__dirname,'public'),
-        publicPath:'/build/',
+        path: path.join(__dirname,'dist'),
         filename: 'build/bundle.js'
     },
 
@@ -19,7 +18,7 @@ const config = {
     },
     devtool: 'source-map',
     devServer: {
-        contentBase: path.join(__dirname, 'public'),
+        contentBase: path.join(__dirname, 'dist'),
         port: 9000,
         compress: true
     }
